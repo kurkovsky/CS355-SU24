@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-int main(){
-    int iCelsius, iFahrenheit = 99;
-    iCelsius = (iFahrenheit - 32) / 9 * 5;
+// This program converts temperature values from Fahrenheit to Celsius
+
+int main() {
+    int iCelsius, iFahrenheit = 98;             // both temperature variables are declared as integers
+    iCelsius = (iFahrenheit - 32) / 9 * 5;      // the result will always be an integer
     printf("%dF is %dC\n", iFahrenheit, iCelsius);
 
-    float fCelsius, fFahrenheit = 99.0;
-    fCelsius = (fFahrenheit - 32) / 9 * 5;
-    printf("%5.2fF is %5.2fC\n", fFahrenheit, fCelsius);
-    return 0;
+    float fCelsius, fFahrenheit = 98.6;         // both temperature variables are declared as floating point numbers
+    fCelsius = (fFahrenheit - 32) / 9 * 5;      // the conversion formula is exactly the same, but the result will preserve the fractional values
+    printf("%6.1fF is %2.1fC\n", fFahrenheit, fCelsius);
 }
